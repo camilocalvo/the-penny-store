@@ -1,3 +1,4 @@
+import styles from "./page.module.scss";
 import Link from "next/link";
 
 export default function RootLayout({
@@ -10,10 +11,22 @@ export default function RootLayout({
       <head />
       <body>
         <main>
-          <nav>
-            <Link href="/">Home</Link>
-            <Link href="/about">About Us</Link>
-          </nav>
+          <header className={styles.header}>
+            <nav className={styles.navigation}>
+              <Link href="/" className={styles["header-item"]}>
+                Home
+              </Link>
+              <Link href="/about" className={styles["header-item"]}>
+                About Us
+              </Link>
+            </nav>
+            <h2 className={styles['header-logo']}>
+              The Penny Store
+            </h2>
+            <div>
+              Cart (0)
+            </div>
+          </header>
         </main>
         {children}
       </body>

@@ -1,3 +1,23 @@
+.header {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+
+  .navigation {
+    display: flex;
+    gap: 1rem;
+
+    &-item {
+      padding-block: 0.25rem;
+    }
+  }
+
+  &-logo {
+    margin: 0;
+  }
+}
+
 .main-content {
   background-color: pink;
 }
