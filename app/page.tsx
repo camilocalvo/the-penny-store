@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./page.module.scss";
 
 export default function HomePage() {
@@ -15,26 +16,34 @@ export default function HomePage() {
 
       <div className={styles["items-wrapper"]}>
         <div className={styles.items}>
-          <div className={styles.item}>
-            <h3>Smiley JPEG</h3>
-            <div className={styles["item-example"]}>:)</div>
-            <button className={styles["buy-button"]}>Buy Now</button>
-          </div>
-          <div className={styles.item}>
-            <h3>Frowney JPEG</h3>
-            <div className={styles["item-example"]}>:(</div>
-            <button className={styles["buy-button"]}>Buy Now</button>
-          </div>
-          <div className={styles.item}>
-            <h3>Smiley JPEG (with Nose)</h3>
-            <div className={styles["item-example"]}>:^)</div>
-            <button className={styles["buy-button"]}>Buy Now</button>
-          </div>
-          <div className={styles.item}>
-            <h3>Wild Card Face</h3>
-            <div className={styles["item-example"]}>?</div>
-            <button className={styles["buy-button"]}>Buy Now</button>
-          </div>
+          <Link href="/products/1" style={{textDecoration: 'none'}}>
+            <div className={styles.item}>
+              <h3>Smiley JPEG</h3>
+              <div className={styles["item-example"]}>:)</div>
+              <button className={styles["buy-button"]}>Buy Now</button>
+            </div>
+          </Link>
+          <Link href="/products/2" style={{textDecoration: 'none'}}>
+            <div className={styles.item}>
+              <h3>Frowney JPEG</h3>
+              <div className={styles["item-example"]}>:(</div>
+              <button className={styles["buy-button"]}>Buy Now</button>
+            </div>
+          </Link>
+          <Link href="/products/3" style={{textDecoration: 'none'}}>
+            <div className={styles.item}>
+              <h3>Smiley JPEG (with Nose)</h3>
+              <div className={styles["item-example"]}>:^)</div>
+              <button className={styles["buy-button"]}>Buy Now</button>
+            </div>
+          </Link>
+          <Link href="/products/4" style={{textDecoration: 'none'}}>
+            <div className={styles.item}>
+              <h3>Wild Card Face</h3>
+              <div className={styles["item-example"]}>?</div>
+              <button className={styles["buy-button"]}>Buy Now</button>
+            </div>
+          </Link>
         </div>
       </div>
     </div>
